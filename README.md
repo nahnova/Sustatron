@@ -4,6 +4,18 @@
 
 Welcome to the Zuyd on Wheels project! This project aims to promote sustainable transportation options for Zuyd University students and staff, reducing traffic congestion and carbon emissions.
 
+# Table of Contents
+1. [Zuyd on Wheels - Sustainable Transportation Project](#zuyd-on-wheels---sustainable-transportation-project)
+2. [Project Overview](#project-overview)
+3. [References](#references)
+4. [Development Steps 📝](#development-steps-)
+5. [Getting Started](#getting-started)
+6. [GitHub Usage and Contributions](#github-usage-and-contributions)
+7. [Folder Structure](#folder-structure)
+8. [Testing and Contributions](#testing-and-contributions)
+9. [License](#license)
+10. [Acknowledgments](#acknowledgments)
+
 ## Project Overview
 
 It's a fact: our roads are getting busier, and it's causing traffic jams and more greenhouse gas emissions. Zuyd University acknowledges its responsibility in addressing these issues. While idealistically, everyone should choose eco-friendly commuting options like public transport, cycling, or carpooling, the reality is that all parking spaces at Zuyd's Heerlen campus are often filled. This leads to students and staff having to park their cars in neighboring areas.
@@ -17,6 +29,77 @@ It's a fact: our roads are getting busier, and it's causing traffic jams and mor
 - [ANWB Traffic Report - July 2023](https://www.anwb.nl/verkeer/nieuws/nederland/2023/juli/filezwaarte-juli-2023)
 - [CBS Report on Sustainable Mobility](https://www.cbs.nl/nl-nl/longread/rapportages/2021/klimaatverandering-en-energietransitie-opvattingen-en-gedrag-van-nederlanders-in-2020/5-duurzame-mobiliteit)
 - [Rijksoverheid Report on Sustainable Mobility](https://magazines.rijksoverheid.nl/ienw/duurzaamheidsverslag/2021/01/duurzame-mobiliteit)
+
+## Development Steps 📝
+
+Building an ASP.NET Core MVC application involves several key steps:
+
+1. **Setup Development Environment**:
+   - Install Visual Studio or Visual Studio Code.
+   - Ensure you have the .NET SDK installed.
+
+2. **Create a New ASP.NET MVC Project**:
+   - Choose the "MVC" template.
+
+3. **Define Your Models**:
+   - Create C# classes to represent your data entities.
+
+4. **Create a DbContext**:
+   - Define an Entity Framework DbContext class for database connectivity.
+
+5. **Configure Dependency Injection**:
+   - Set up dependency injection in `Startup.cs` to inject services and repositories.
+
+6. **Create Controllers**:
+   - Handle HTTP requests by creating controllers and actions.
+
+7. **Create Views**:
+   - Develop Razor views (.cshtml files) for rendering HTML templates.
+
+8. **Implement Routing**:
+   - Configure URL routing in `Startup.cs` to map URLs to controller actions.
+
+9. **Implement CRUD Operations**:
+   - Create methods in controllers for Create, Read, Update, and Delete (CRUD) operations.
+
+10. **Apply Validation**:
+    - Add data validation to models using annotations or custom logic.
+
+11. **Implement Authentication and Authorization** (if needed):
+    - Configure user authentication and authorization.
+
+12. **Testing**:
+    - Write unit tests for controllers and services using testing frameworks like xUnit or NUnit.
+
+13. **Logging**:
+    - Configure logging for debugging and monitoring.
+
+14. **Styling and Client-Side Scripts**:
+    - Enhance UI with CSS styles and client-side scripts.
+
+15. **Deployment**:
+    - Prepare for deployment to a web server or cloud platform.
+
+16. **Testing in a Production-Like Environment**:
+    - Ensure your app functions correctly in a staging environment.
+
+17. **Documentation**:
+    - Create documentation including installation instructions and usage guides.
+
+18. **Optimization**:
+    - Optimize for performance and scalability.
+
+19. **Security**:
+    - Implement security best practices.
+
+20. **Monitoring and Error Handling**:
+    - Set up monitoring and error tracking.
+
+21. **Launch**:
+    - Deploy your app to production.
+
+22. **Maintenance**:
+    - Regularly maintain and update your app.
 
 ## Getting Started
 
