@@ -3,6 +3,7 @@
 ![Zuyd on Wheels Logo](https://avatars.slack-edge.com/2023-09-13/5890460198580_38fa7376891430aa5949_132.png)
 
 Welcome to the Zuyd on Wheels project! This project aims to promote sustainable transportation options for Zuyd University students and staff, reducing traffic congestion and carbon emissions.
+[Assignment](https://mirri.link/1HdFU10)
 
 # Table of Contents
 1. [Zuyd on Wheels - Sustainable Transportation Project](#zuyd-on-wheels---sustainable-transportation-project)
