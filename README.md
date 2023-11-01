@@ -173,6 +173,73 @@ Here's an overview of the project's folder structure:
 - `Services`: Business logic and services.
 - `wwwroot`: Static files like CSS, JavaScript, and images.
 
+# Getting Started 🚀
+
+Follow these steps to get started with the AutoProfix Garage Management System:
+
+1. **Prerequisites**:
+   - Make sure you have the following prerequisites installed on your development machine:
+     - Visual Studio or Visual Studio Code.
+     - .NET SDK (Software Development Kit).
+     - SQL Server (or another preferred database system).
+
+2. **Clone the Repository**:
+   - Clone this GitHub repository to your local machine using the following command:
+     ```
+     git clone https://github.com/nahnova/Sustatron.git
+     ```
+
+3. **Open the Project**:
+   - Open the project using your chosen development environment (Visual Studio or Visual Studio Code).
+
+4. **Database Configuration**:
+   - Configure your database connection string in the `appsettings.json` file. Ensure it points to your SQL Server instance or preferred database system.
+
+5. **Database Migration**:
+   - This project was created with Code First in mind, not Database First. Code First allows you to define your database schema using C# classes and generate the database from your model. Open a terminal within your project's root directory and run the following commands to apply the initial database migration:
+     ```
+     dotnet ef migrations add InitialCreate
+     dotnet ef database update
+     ```
+
+6. **Run the Application**:
+   - Build and run the application using your development environment. If using Visual Studio, press F5. If using Visual Studio Code, use the `dotnet run` command.
+
+7. **Access the Application**:
+   - Open your web browser and navigate to `http://localhost:5137` (or the port specified in your `Startup.cs` if different). You should see the AutoProfix Garage Management System homepage.
+
+8. **Explore the Functionality**:
+   - Explore the various features and functionalities 
+
+9. **Customize and Extend**:
+   - Customize the application to meet your specific requirements or extend its functionality as needed. You can modify controllers, views, models, and add new features to suit your needs.
+
+10. **Testing and Deployment**:
+    - Test the application thoroughly to ensure it meets your requirements and standards.
+    - When ready, deploy the application to a production environment or hosting service to make it accessible to your team and customers.
+
+11. **Documentation**:
+    - Create documentation for your team, including user guides and admin instructions on how to use and maintain the system.
+
+12. **Enjoy**:
+    - Enjoy the benefits of the Sustatron, which will help streamline your emissions, improve customer service, and enhance your business sustainability.
+
+Feel free to refer to the [Diagrams and Designs](#diagrams-and-designs) section for visual representations of the application's architecture, database schema, and user interface designs to gain a better understanding of the system's structure and functionality.
+
+## Diagrams and Designs 📊🎨
+
+1. **Wireframes and Mockups**: Design the user interface of your application using wireframes or mockups to outline the layout and user interaction flow.
+
+
+2. **Use Case Diagram**: Visualizes the use cases per actor.
+
+
+3. **Entity Class Diagrams**: Visualize the relationships between entities in your code, including classes, properties, and methods.
+![image 1](https://github.com/nahnova/Sustatron/assets/56248103/6932e21f-d434-4877-9933-98eb839132da)
+
+4. **Sequence Diagram**: Visualize the application flow and their related models.
+![image 3](https://github.com/nahnova/Sustatron/assets/56248103/44b4a338-d328-4361-b45c-176f502aae13)
+
 ## Testing and Contributions
 
 We welcome contributions to improve Zuyd on Wheels! Please follow these guidelines:
