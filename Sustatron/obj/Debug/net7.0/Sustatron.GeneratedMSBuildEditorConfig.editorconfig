@@ -9,37 +9,177 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Sustatron
 build_property.RootNamespace = Sustatron
-build_property.ProjectDir = C:\Users\xavie\source\repos\Sustatron-Web\Sustatron\
+build_property.ProjectDir = /Users/noaheutz/Developer/Sustatron/Sustatron/
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\xavie\source\repos\Sustatron-Web\Sustatron
+build_property.MSBuildProjectDirectory = /Users/noaheutz/Developer/Sustatron/Sustatron
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/xavie/source/repos/Sustatron-Web/Sustatron/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/Achievement/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNoaWV2ZW1lbnQvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/xavie/source/repos/Sustatron-Web/Sustatron/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/Achievement/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNoaWV2ZW1lbnQvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/xavie/source/repos/Sustatron-Web/Sustatron/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/Achievement/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNoaWV2ZW1lbnQvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/xavie/source/repos/Sustatron-Web/Sustatron/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/Achievement/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNoaWV2ZW1lbnQvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/xavie/source/repos/Sustatron-Web/Sustatron/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/Achievement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNoaWV2ZW1lbnQvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/xavie/source/repos/Sustatron-Web/Sustatron/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/Commute/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbXV0ZS9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/xavie/source/repos/Sustatron-Web/Sustatron/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-e9i1a8x1ya
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/Commute/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbXV0ZS9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/Commute/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbXV0ZS9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/Commute/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbXV0ZS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/Commute/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbXV0ZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/ParkingLocation/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFya2luZ0xvY2F0aW9uL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/ParkingLocation/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFya2luZ0xvY2F0aW9uL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/ParkingLocation/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFya2luZ0xvY2F0aW9uL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/ParkingLocation/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFya2luZ0xvY2F0aW9uL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/ParkingLocation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFya2luZ0xvY2F0aW9uL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/SustainabilityMetric/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3VzdGFpbmFiaWxpdHlNZXRyaWMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/SustainabilityMetric/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3VzdGFpbmFiaWxpdHlNZXRyaWMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/SustainabilityMetric/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3VzdGFpbmFiaWxpdHlNZXRyaWMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/SustainabilityMetric/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3VzdGFpbmFiaWxpdHlNZXRyaWMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/SustainabilityMetric/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3VzdGFpbmFiaWxpdHlNZXRyaWMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/TrafficReport/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhZmZpY1JlcG9ydC9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/TrafficReport/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhZmZpY1JlcG9ydC9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/TrafficReport/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhZmZpY1JlcG9ydC9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/TrafficReport/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhZmZpY1JlcG9ydC9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/TrafficReport/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhZmZpY1JlcG9ydC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/TransportationOption/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNwb3J0YXRpb25PcHRpb24vQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/TransportationOption/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNwb3J0YXRpb25PcHRpb24vRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/TransportationOption/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNwb3J0YXRpb25PcHRpb24vRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/TransportationOption/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNwb3J0YXRpb25PcHRpb24vRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/TransportationOption/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNwb3J0YXRpb25PcHRpb24vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/User/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/User/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/User/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/User/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/noaheutz/Developer/Sustatron/Sustatron/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-2sbgwev2gm
