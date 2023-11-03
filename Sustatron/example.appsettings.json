@@ -7,8 +7,7 @@
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "DefaultConnection": "Data Source=desktop-ir29ng7;Initial Catalog=SustatronDb;Integrated Security=True;TrustServerCertificate=True;Encrypt=false;"
-  },
-
-  
+    "DefaultConnectionWindows": "Data Source=desktop-ir29ng7;Initial Catalog=SustatronDb;Integrated Security=True;TrustServerCertificate=True;Encrypt=false;",
+    "DefaultConnectionMac": "Server=localhost,1433;Database=SustatronDb;User Id=sa;Password=yourStrong(!)Password;TrustServerCertificate=True;Encrypt=false;"
+  }
 }
