@@ -22,7 +22,7 @@ namespace Sustatron.Controllers
         // GET: Vehicles
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Vehicles.Include(v => v.Commute).Include(v => v.User);
+            var applicationDbContext = _context.Vehicles.Include(v => v.User);
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -35,7 +35,6 @@ namespace Sustatron.Controllers
             }
 
             var vehicle = await _context.Vehicles
-                .Include(v => v.Commute)
                 .Include(v => v.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (vehicle == null)
@@ -49,7 +48,6 @@ namespace Sustatron.Controllers
         // GET: Vehicles/Create
         public IActionResult Create()
         {
-            ViewData["CommuteId"] = new SelectList(_context.Commutes, "Id", "Id");
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
             return View();
         }
@@ -59,7 +57,7 @@ namespace Sustatron.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,VehicleName,LicencePlate,MaxEmission,CurrentEmission,UserId,CommuteId")] Vehicle vehicle)
+        public async Task<IActionResult> Create([Bind("Id,VehicleName,LicencePlate,MaxEmission,CurrentEmission,UserId")] Vehicle vehicle)
         {
             if (ModelState.IsValid)
             {
@@ -67,7 +65,6 @@ namespace Sustatron.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CommuteId"] = new SelectList(_context.Commutes, "Id", "Id", vehicle.CommuteId);
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", vehicle.UserId);
             return View(vehicle);
         }
@@ -85,7 +82,6 @@ namespace Sustatron.Controllers
             {
                 return NotFound();
             }
-            ViewData["CommuteId"] = new SelectList(_context.Commutes, "Id", "Id", vehicle.CommuteId);
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", vehicle.UserId);
             return View(vehicle);
         }
@@ -95,7 +91,7 @@ namespace Sustatron.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,VehicleName,LicencePlate,MaxEmission,CurrentEmission,UserId,CommuteId")] Vehicle vehicle)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,VehicleName,LicencePlate,MaxEmission,CurrentEmission,UserId")] Vehicle vehicle)
         {
             if (id != vehicle.Id)
             {
@@ -122,7 +118,6 @@ namespace Sustatron.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CommuteId"] = new SelectList(_context.Commutes, "Id", "Id", vehicle.CommuteId);
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", vehicle.UserId);
             return View(vehicle);
         }
@@ -136,7 +131,6 @@ namespace Sustatron.Controllers
             }
 
             var vehicle = await _context.Vehicles
-                .Include(v => v.Commute)
                 .Include(v => v.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (vehicle == null)
