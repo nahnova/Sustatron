@@ -124,12 +124,13 @@ Follow these steps to set up the project locally and start contributing:
    - Build and run the application.
 
 5. **Database Migrations**:
+   [docs](https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli)
    - Use Entity Framework migrations to create the database schema.
    ```sh
    dotnet ef database update
    ```
 
-6. **Explore the Application**:
+7. **Explore the Application**:
    - Access the application in your web browser (usually at `http://localhost:port`).
 
 ## GitHub Usage and Contributions
