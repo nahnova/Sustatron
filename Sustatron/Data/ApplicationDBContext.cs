@@ -27,10 +27,15 @@ namespace Sustatron.Data
                 .HasForeignKey(a => a.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            /*modelBuilder.Entity<Commute>()
+            modelBuilder.Entity<Commute>()
                 .HasOne(u => u.User)
                 .WithOne(a => a.Commute)
-                .HasForeignKey<User>(a => a.CommuteId);*/
+                .HasForeignKey<User>(a => a.CommuteId);
+
+            modelBuilder.Entity<User>()
+                .HasOne(u => u.Commute)
+                .WithOne(a => a.User)
+                .HasForeignKey<Commute>(a => a.UserId);
 
             // Call base method
             base.OnModelCreating(modelBuilder);

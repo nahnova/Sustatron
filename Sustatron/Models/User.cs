@@ -14,6 +14,6 @@ public class User
 
     public Vehicle? Vehicle { get; set; }
     public ICollection<Vehicle>? Vehicles { get;}
-    public int CommuteId { get; set; }
+    public int? CommuteId { get; set; }
     public Commute? Commute { get; set; }
 }
