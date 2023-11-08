@@ -9,177 +9,97 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Sustatron
 build_property.RootNamespace = Sustatron
-build_property.ProjectDir = D:\repositories\Sustatron\Sustatron\
+build_property.ProjectDir = C:\Users\xavie\OneDrive\Documents\GitHub\Sustatron\Sustatron\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\repositories\Sustatron\Sustatron
+build_property.MSBuildProjectDirectory = C:\Users\xavie\OneDrive\Documents\GitHub\Sustatron\Sustatron
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/repositories/Sustatron/Sustatron/Views/Achievement/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNoaWV2ZW1lbnRcQ3JlYXRlLmNzaHRtbA==
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Commutes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXV0ZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/Achievement/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNoaWV2ZW1lbnRcRGVsZXRlLmNzaHRtbA==
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Commutes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXV0ZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/Achievement/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNoaWV2ZW1lbnRcRGV0YWlscy5jc2h0bWw=
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Commutes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXV0ZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/Achievement/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNoaWV2ZW1lbnRcRWRpdC5jc2h0bWw=
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Commutes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXV0ZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/Achievement/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNoaWV2ZW1lbnRcSW5kZXguY3NodG1s
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Commutes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXV0ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/Commute/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXV0ZVxDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/Commute/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXV0ZVxEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/Commute/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXV0ZVxEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/Commute/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXV0ZVxFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/Commute/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXV0ZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/Home/Index.cshtml]
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/Home/Privacy.cshtml]
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/ParkingLocation/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFya2luZ0xvY2F0aW9uXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/ParkingLocation/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFya2luZ0xvY2F0aW9uXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/ParkingLocation/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFya2luZ0xvY2F0aW9uXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/ParkingLocation/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFya2luZ0xvY2F0aW9uXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/ParkingLocation/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFya2luZ0xvY2F0aW9uXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/Shared/Error.cshtml]
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/SustainabilityMetric/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VzdGFpbmFiaWxpdHlNZXRyaWNcQ3JlYXRlLmNzaHRtbA==
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Users/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/SustainabilityMetric/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VzdGFpbmFiaWxpdHlNZXRyaWNcRGVsZXRlLmNzaHRtbA==
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Users/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/SustainabilityMetric/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VzdGFpbmFiaWxpdHlNZXRyaWNcRGV0YWlscy5jc2h0bWw=
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Users/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/SustainabilityMetric/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VzdGFpbmFiaWxpdHlNZXRyaWNcRWRpdC5jc2h0bWw=
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/SustainabilityMetric/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VzdGFpbmFiaWxpdHlNZXRyaWNcSW5kZXguY3NodG1s
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/TrafficReport/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZmZpY1JlcG9ydFxDcmVhdGUuY3NodG1s
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Vehicles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/TrafficReport/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZmZpY1JlcG9ydFxEZWxldGUuY3NodG1s
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Vehicles/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/TrafficReport/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZmZpY1JlcG9ydFxEZXRhaWxzLmNzaHRtbA==
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Vehicles/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/TrafficReport/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZmZpY1JlcG9ydFxFZGl0LmNzaHRtbA==
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Vehicles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/TrafficReport/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZmZpY1JlcG9ydFxJbmRleC5jc2h0bWw=
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Vehicles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/TransportationOption/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNwb3J0YXRpb25PcHRpb25cQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/TransportationOption/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNwb3J0YXRpb25PcHRpb25cRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/TransportationOption/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNwb3J0YXRpb25PcHRpb25cRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/TransportationOption/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNwb3J0YXRpb25PcHRpb25cRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/TransportationOption/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNwb3J0YXRpb25PcHRpb25cSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/User/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/User/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/User/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/User/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/User/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/repositories/Sustatron/Sustatron/Views/_ViewImports.cshtml]
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/_ViewStart.cshtml]
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repositories/Sustatron/Sustatron/Views/Shared/_Layout.cshtml]
+[C:/Users/xavie/OneDrive/Documents/GitHub/Sustatron/Sustatron/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-e9i1a8x1ya
