@@ -10,8 +10,9 @@ namespace Sustatron.Models
         public int Id { get; set; }
         public int KmDistance { get; set; }
         public DateTime Date { get; set; }
-
-        public int UserId { get; set; }
-        public User? User { get; set; }
+        [ForeignKey("VehicleId")]
+        public int VehicleId { get; set; }
+        
+        public Vehicle? Vehicle { get; set; }
     }
 }

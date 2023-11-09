@@ -13,7 +13,7 @@ namespace Sustatron.Models
         public int MaxEmission { get; set; }
         public int CurrentEmission { get; set; }
 
-
+        public ICollection<Commute>? Commutes { get; set; }
         public int UserId { get; set; }
         public User? User { get; set; }
     }

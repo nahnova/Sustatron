@@ -4,10 +4,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Vehicle's</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Add new vehicle</a>
 </p>
 <table class="table">
     <thead>
@@ -19,13 +19,13 @@
                 @Html.DisplayNameFor(model => model.LicencePlate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MaxEmission)
+                CO2 Emission Limit in grams
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CurrentEmission)
+                Current CO2 Emission in grams
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.User)
+                @Html.DisplayNameFor(model => model.User.StudentNumber)
             </th>
             <th></th>
         </tr>
@@ -46,7 +46,7 @@
                 @Html.DisplayFor(modelItem => item.CurrentEmission)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.User.Id)
+                @Html.DisplayFor(modelItem => item.User.StudentNumber)
             </td>
             <td>
                 <a asp-action="Chart" asp-route-id="@item.Id">Chart</a> |

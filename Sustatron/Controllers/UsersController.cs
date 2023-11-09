@@ -57,6 +57,7 @@ namespace Sustatron.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,StudentNumber")] User user)
+        // we want users to get points for percentage's of their max emission that they have used up in a month
         {
             if (ModelState.IsValid)
             {

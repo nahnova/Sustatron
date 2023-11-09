@@ -50,26 +50,35 @@ namespace Sustatron.Controllers
         // GET: Vehicles/Create
         public IActionResult Create()
         {
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "StudentNumber");
             return View();
         }
 
+
         // POST: Vehicles/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,VehicleName,LicencePlate,MaxEmission,CurrentEmission,UserId")] Vehicle vehicle)
         {
             if (ModelState.IsValid)
             {
+                // Calculate MaxEmission based on CurrentEmission
+                vehicle.MaxEmission = 95 * 16 * 16; // 95g/km * 16km * 16 days retour trip 67rplg
+                vehicle.CurrentEmission = 0;
+
+                // Add the vehicle to the context
                 _context.Add(vehicle);
+
+                // Save changes to the database
                 await _context.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
+
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", vehicle.UserId);
             return View(vehicle);
         }
+
 
 		// GET: Vehicles/Chart/5
 		public async Task<IActionResult> Chart(int? id)
@@ -86,7 +95,7 @@ namespace Sustatron.Controllers
 			List<DataPoint> dataPoints = new List<DataPoint>();
 
 			dataPoints.Add(new DataPoint("Max emission", vehicle.MaxEmission));
-			dataPoints.Add(new DataPoint("" + vehicle.VehicleName + "", vehicle.CurrentEmission));
+			dataPoints.Add(new DataPoint(vehicle.VehicleName, vehicle.CurrentEmission));
 
 			ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
 

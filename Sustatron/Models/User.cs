@@ -11,7 +11,8 @@ public class User
     public required string FirstName { get; set; }
     public required string LastName { get; set; }
     public int StudentNumber { get; set; }
-
+    
+    public int Points { get; set; }
     public ICollection<Vehicle>? Vehicles { get;}
     public Commute? Commute { get; set; }
 }

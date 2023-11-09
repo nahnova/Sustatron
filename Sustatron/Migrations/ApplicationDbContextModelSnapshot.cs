@@ -36,13 +36,12 @@ namespace Sustatron.Migrations
                     b.Property<int>("KmDistance")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
+                    b.Property<int>("VehicleId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
+                    b.HasIndex("VehicleId");
 
                     b.ToTable("Commutes");
                 });
@@ -55,6 +54,9 @@ namespace Sustatron.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("CommuteId")
+                        .HasColumnType("int");
+
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -63,10 +65,15 @@ namespace Sustatron.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Points")
+                        .HasColumnType("int");
+
                     b.Property<int>("StudentNumber")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CommuteId");
 
                     b.ToTable("Users");
                 });
@@ -105,13 +112,22 @@ namespace Sustatron.Migrations
 
             modelBuilder.Entity("Sustatron.Models.Commute", b =>
                 {
-                    b.HasOne("Sustatron.Models.User", "User")
-                        .WithOne("Commute")
-                        .HasForeignKey("Sustatron.Models.Commute", "UserId")
+                    b.HasOne("Sustatron.Models.Vehicle", "Vehicle")
+                        .WithMany("Commutes")
+                        .HasForeignKey("VehicleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("User");
+                    b.Navigation("Vehicle");
+                });
+
+            modelBuilder.Entity("Sustatron.Models.User", b =>
+                {
+                    b.HasOne("Sustatron.Models.Commute", "Commute")
+                        .WithMany()
+                        .HasForeignKey("CommuteId");
+
+                    b.Navigation("Commute");
                 });
 
             modelBuilder.Entity("Sustatron.Models.Vehicle", b =>
@@ -127,9 +143,12 @@ namespace Sustatron.Migrations
 
             modelBuilder.Entity("Sustatron.Models.User", b =>
                 {
-                    b.Navigation("Commute");
-
                     b.Navigation("Vehicles");
+                });
+
+            modelBuilder.Entity("Sustatron.Models.Vehicle", b =>
+                {
+                    b.Navigation("Commutes");
                 });
 #pragma warning restore 612, 618
         }
