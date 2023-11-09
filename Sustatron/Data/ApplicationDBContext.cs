@@ -14,6 +14,9 @@ namespace Sustatron.Data
         public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<Commute> Commutes { get; set; }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseSqlServer("Data Source=desktop-fs0t5ua;Initial Catalog=SustatronDb;Integrated Security=True;TrustServerCertificate=True;Encrypt=false;");
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -26,11 +29,6 @@ namespace Sustatron.Data
                 .WithOne(a => a.User)
                 .HasForeignKey(a => a.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
-
-            modelBuilder.Entity<Commute>()
-                .HasOne(u => u.User)
-                .WithOne(a => a.Commute)
-                .HasForeignKey<User>(a => a.CommuteId);
 
             modelBuilder.Entity<User>()
                 .HasOne(u => u.Commute)
