@@ -204,7 +204,7 @@ namespace Sustatron.Controllers
             {
                 // Define your constants for point calculation
                 const int MaxPoints = 100;        // Adjust the maximum points as needed
-                const double PenaltyPoints = 2.0; // Adjust the penalty factor as needed
+                const double PenaltyPoints = 100.0; // Adjust the penalty factor as needed
 
                 // Calculate points based on the formula
                 double points = MaxPoints - (percentageUsed * PenaltyPoints);
