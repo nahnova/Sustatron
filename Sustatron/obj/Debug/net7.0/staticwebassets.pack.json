@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Sustatron.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\xavie\\OneDrive\\Documents\\GitHub\\Sustatron\\Sustatron\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
       "Id": "C:\\Users\\xavie\\OneDrive\\Documents\\GitHub\\Sustatron\\Sustatron\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

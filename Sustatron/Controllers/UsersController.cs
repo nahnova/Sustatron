@@ -22,8 +22,9 @@ namespace Sustatron.Controllers
         // GET: Users
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Users.Include(u => u.Commute);
-            return View(await applicationDbContext.ToListAsync());
+              return _context.Users != null ? 
+                          View(await _context.Users.ToListAsync()) :
+                          Problem("Entity set 'ApplicationDbContext.Users'  is null.");
         }
 
         // GET: Users/Details/5
@@ -35,7 +36,6 @@ namespace Sustatron.Controllers
             }
 
             var user = await _context.Users
-                .Include(u => u.Commute)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (user == null)
             {
@@ -48,7 +48,6 @@ namespace Sustatron.Controllers
         // GET: Users/Create
         public IActionResult Create()
         {
-            ViewData["CommuteId"] = new SelectList(_context.Commutes, "Id", "Id");
             return View();
         }
 
@@ -57,7 +56,7 @@ namespace Sustatron.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,StudentNumber,CommuteId")] User user)
+        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,StudentNumber")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +64,6 @@ namespace Sustatron.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CommuteId"] = new SelectList(_context.Commutes, "Id", "Id", user.CommuteId);
             return View(user);
         }
 
@@ -82,7 +80,6 @@ namespace Sustatron.Controllers
             {
                 return NotFound();
             }
-            ViewData["CommuteId"] = new SelectList(_context.Commutes, "Id", "Id", user.CommuteId);
             return View(user);
         }
 
@@ -91,7 +88,7 @@ namespace Sustatron.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,StudentNumber,CommuteId")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,StudentNumber")] User user)
         {
             if (id != user.Id)
             {
@@ -118,7 +115,6 @@ namespace Sustatron.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CommuteId"] = new SelectList(_context.Commutes, "Id", "Id", user.CommuteId);
             return View(user);
         }
 
@@ -131,7 +127,6 @@ namespace Sustatron.Controllers
             }
 
             var user = await _context.Users
-                .Include(u => u.Commute)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (user == null)
             {
