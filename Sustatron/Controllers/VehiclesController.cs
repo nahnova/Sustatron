@@ -55,7 +55,7 @@ namespace Sustatron.Controllers
         }
 
 
-        // POST: Vehicles/Create
+         // POST: Vehicles/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,VehicleName,LicencePlate,MaxEmission,CurrentEmission,UserId")] Vehicle vehicle)
@@ -75,6 +75,41 @@ namespace Sustatron.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
+            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", vehicle.UserId);
+            return View(vehicle);
+        }
+
+        // POST: Vehicles/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,VehicleName,LicencePlate,MaxEmission,CurrentEmission,UserId")] Vehicle vehicle)
+        {
+            if (id != vehicle.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(vehicle);
+                    await _context.SaveChangesAsync();
+
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!VehicleExists(vehicle.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", vehicle.UserId);
             return View(vehicle);
         }
@@ -120,42 +155,6 @@ namespace Sustatron.Controllers
 			return View(vehicle);
 		}
 
-		// POST: Vehicles/Edit/5
-		// To protect from overposting attacks, enable the specific properties you want to bind to.
-		// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-		[HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,VehicleName,LicencePlate,MaxEmission,CurrentEmission,UserId")] Vehicle vehicle)
-        {
-            if (id != vehicle.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(vehicle);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!VehicleExists(vehicle.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", vehicle.UserId);
-            return View(vehicle);
-        }
-
         // GET: Vehicles/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -197,6 +196,55 @@ namespace Sustatron.Controllers
         private bool VehicleExists(int id)
         {
           return (_context.Vehicles?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+        private async Task UpdateUserPoints(int userId, double percentageUsed)
+        {
+            var user = await _context.Users.FindAsync(userId);
+            if (user != null)
+            {
+                // Define your constants for point calculation
+                const int MaxPoints = 100;        // Adjust the maximum points as needed
+                const double PenaltyPoints = 2.0; // Adjust the penalty factor as needed
+
+                // Calculate points based on the formula
+                double points = MaxPoints - (percentageUsed * PenaltyPoints);
+
+                // Ensure points are not negative
+                if (points < 0)
+                {
+                    points = 0;
+                }
+
+                // Update the user's points add them to the old points
+                user.Points = (int)points + user.Points;
+                _context.Update(user);
+                await _context.SaveChangesAsync();
+            }
+        }
+        // GET: Vehicles/UpdateEndOfMonth
+        public async Task<IActionResult> UpdateEndOfMonth()
+        {
+            // Assuming the end of the month operation here
+            // Loop through all vehicles
+
+            var vehicles = await _context.Vehicles.Include(v => v.User).ToListAsync();
+
+            foreach (var vehicle in vehicles)
+            {
+                // Calculate the percentage of max emission used
+                double percentageUsed = (double)vehicle.CurrentEmission / vehicle.MaxEmission;
+
+                // Update user points
+                await UpdateUserPoints(vehicle.UserId, percentageUsed);
+
+                // Set CurrentEmission to 0
+                vehicle.CurrentEmission = 0;
+                _context.Update(vehicle);
+            }
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }

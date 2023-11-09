@@ -7,8 +7,51 @@
 <h1>Vehicle's</h1>
 
 <p>
-    <a asp-action="Create">Add new vehicle</a>
+    <a asp-action="Create" class="btn btn-primary">Add new vehicle</a>
 </p>
+
+<div class="user-points-section">
+    <h2>User Points</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Rank
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Points
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                var rank = 1; // Initialize the rank counter
+                foreach (var item in Model.OrderByDescending(x => x.User.Points))
+                {
+                    <tr>
+                        <td>
+                            @rank
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.User.FirstName) @Html.DisplayFor(modelItem => item.User.LastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.User.Points)
+                        </td>
+                    </tr>
+                    rank++; // Increment the rank counter for the next user
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+<!-- Vehicle table -->
 <table class="table">
     <thead>
         <tr>
@@ -31,30 +74,53 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.VehicleName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LicencePlate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaxEmission)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CurrentEmission)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.User.StudentNumber)
-            </td>
-            <td>
-                <a asp-action="Chart" asp-route-id="@item.Id">Chart</a> |
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VehicleName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LicencePlate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaxEmission)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CurrentEmission)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.StudentNumber)
+                </td>
+                <td>
+                    <a asp-action="Chart" asp-route-id="@item.Id">Chart</a> |
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+ <!-- Explanation Section -->
+ <div class="row">
+     <div class="col-md-12">
+         <h2>Explanation of Points Calculation Mechanism</h2>
+         <p>
+             The "End of Month" button on this page calculates and updates user points based on vehicle emissions. When clicked, it computes points for each user by determining the percentage of their vehicle's maximum CO2 emission used during the month.
+         </p>
+ 
+         <p>
+             The points calculation formula is: points = MaxPoints - (percentageUsed * PenaltyPoints). MaxPoints represents the maximum achievable points, while PenaltyPoints is a factor applied to the percentage used. Users accumulate points over time, and negative points are set to zero.
+         </p>
+ 
+         <p>
+             After calculation, user points are updated in the database to reflect their environmental contribution for the month. Vehicle emissions are reset to zero, promoting sustainable practices within the community.
+         </p>
+     </div>
+ </div>
+
+        <div class="col-md-12">
+            <a asp-action="UpdateEndOfMonth" class="btn btn-primary">Update End of Month</a>
+        </div>
