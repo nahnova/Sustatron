@@ -1,0 +1,33 @@
+﻿@model Sustatron.Models.Vehicle
+
+@{
+    ViewData["Title"] = "Chart";
+}
+
+<body>
+	<h1 style="text-align:center">This is the emission from your car</h1>
+
+	<div id="chartContainer" style="height: 370px; display:block; width: 100%;">
+		>
+		<script>
+			window.onload = function () {
+
+				var chart = new CanvasJS.Chart("chartContainer", {
+					animationEnabled: true,
+					axisY: {
+						title: "Emission in grams",
+						gridThickness: 0
+					},
+					data: [{
+						type: "bar",
+						dataPoints: @Html.Raw(ViewBag.DataPoints)
+						}]
+				});
+				chart.render();
+
+			}
+		</script>
+	</div>
+	<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</body>
+

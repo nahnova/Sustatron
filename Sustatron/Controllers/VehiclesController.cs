@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using Sustatron.Data;
 using Sustatron.Models;
+using static Sustatron.Models.Chart;
 
 namespace Sustatron.Controllers
 {
@@ -69,27 +71,50 @@ namespace Sustatron.Controllers
             return View(vehicle);
         }
 
-        // GET: Vehicles/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null || _context.Vehicles == null)
-            {
-                return NotFound();
-            }
+		// GET: Vehicles/Chart/5
+		public async Task<IActionResult> Chart(int? id)
+		{
+			if (id == null || _context.Vehicles == null)
+			{
+				return NotFound();
+			}
 
-            var vehicle = await _context.Vehicles.FindAsync(id);
-            if (vehicle == null)
-            {
-                return NotFound();
-            }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", vehicle.UserId);
-            return View(vehicle);
-        }
+			var vehicle = await _context.Vehicles
+				.Include(v => v.User)
+				.FirstOrDefaultAsync(m => m.Id == id);
 
-        // POST: Vehicles/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+			List<DataPoint> dataPoints = new List<DataPoint>();
+
+			dataPoints.Add(new DataPoint("Max emission", vehicle.MaxEmission));
+			dataPoints.Add(new DataPoint("" + vehicle.VehicleName + "", vehicle.CurrentEmission));
+
+			ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
+
+			ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", vehicle.UserId);
+			return View(vehicle);
+		}
+
+		// GET: Vehicles/Edit/5
+		public async Task<IActionResult> Edit(int? id)
+		{
+			if (id == null || _context.Vehicles == null)
+			{
+				return NotFound();
+			}
+
+			var vehicle = await _context.Vehicles.FindAsync(id);
+			if (vehicle == null)
+			{
+				return NotFound();
+			}
+			ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", vehicle.UserId);
+			return View(vehicle);
+		}
+
+		// POST: Vehicles/Edit/5
+		// To protect from overposting attacks, enable the specific properties you want to bind to.
+		// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+		[HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,VehicleName,LicencePlate,MaxEmission,CurrentEmission,UserId")] Vehicle vehicle)
         {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6cg9wIm+LXdAbh5hUh18FFRTJ0vyc8lWFmv9i54TM9U=",
+  "Hash": "pJYJlQvJ+xioHBm4PNFJLjtbku5nWO52aiC+dmP28+w=",
   "Source": "Sustatron",
   "BasePath": "_content/Sustatron",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\xavie\\OneDrive\\Documents\\GitHub\\Sustatron\\Sustatron\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Sustatron.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\xavie\\OneDrive\\Documents\\GitHub\\Sustatron\\Sustatron\\wwwroot\\css\\bootstrap.css",
+      "SourceId": "Sustatron",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\xavie\\OneDrive\\Documents\\GitHub\\Sustatron\\Sustatron\\wwwroot\\",
+      "BasePath": "_content/Sustatron",
+      "RelativePath": "css/bootstrap.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap.css"
     },
     {
       "Identity": "C:\\Users\\xavie\\OneDrive\\Documents\\GitHub\\Sustatron\\Sustatron\\wwwroot\\css\\site.css",
