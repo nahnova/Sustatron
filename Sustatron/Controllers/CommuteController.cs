@@ -22,7 +22,7 @@ namespace Sustatron.Controllers
         // GET: Commute
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Commutes.Include(c => c.TransportationOption).Include(c => c.User);
+            var applicationDbContext = _context.Commutes.Include(c => c.Vehicle);
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -35,8 +35,7 @@ namespace Sustatron.Controllers
             }
 
             var commute = await _context.Commutes
-                .Include(c => c.TransportationOption)
-                .Include(c => c.User)
+                .Include(c => c.Vehicle)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (commute == null)
             {
@@ -49,28 +48,47 @@ namespace Sustatron.Controllers
         // GET: Commute/Create
         public IActionResult Create()
         {
-            ViewData["TransportationOptionId"] = new SelectList(_context.TransportationOptions, "Id", "Id");
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["VehicleId"] = new SelectList(_context.Vehicles, "Id", "LicencePlate");
             return View();
         }
 
         // POST: Commute/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,UserId,TransportationOptionId,Date,StartLocation,EndLocation,Distance,Duration,CarbonEmissions")] Commute commute)
+        public async Task<IActionResult> Create([Bind("Id,KmDistance,Date,VehicleId")] Commute commute)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(commute);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                // Calculate the emission increase based on KmDistance
+                double emissionIncrease = commute.KmDistance * 95;
+
+                // Retrieve the corresponding vehicle from the database
+                var vehicle = await _context.Vehicles.FindAsync(commute.VehicleId);
+
+                if (vehicle != null)
+                {
+                    // Update the CurrentEmission in the vehicle
+                    vehicle.CurrentEmission = (int)Math.Round(vehicle.CurrentEmission + emissionIncrease);
+
+                    // Add the commute to the context
+                    _context.Add(commute);
+
+                    // Save changes to the database
+                    await _context.SaveChangesAsync();
+
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    // Handle the case where the vehicle is not found
+                    ModelState.AddModelError(string.Empty, "Vehicle not found.");
+                }
             }
-            ViewData["TransportationOptionId"] = new SelectList(_context.TransportationOptions, "Id", "Id", commute.TransportationOptionId);
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", commute.UserId);
+
+            ViewData["VehicleId"] = new SelectList(_context.Vehicles, "Id", "Id", commute.VehicleId);
             return View(commute);
         }
+
 
         // GET: Commute/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -85,8 +103,7 @@ namespace Sustatron.Controllers
             {
                 return NotFound();
             }
-            ViewData["TransportationOptionId"] = new SelectList(_context.TransportationOptions, "Id", "Id", commute.TransportationOptionId);
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", commute.UserId);
+            ViewData["VehicleId"] = new SelectList(_context.Vehicles, "Id", "Id", commute.VehicleId);
             return View(commute);
         }
 
@@ -95,7 +112,7 @@ namespace Sustatron.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,UserId,TransportationOptionId,Date,StartLocation,EndLocation,Distance,Duration,CarbonEmissions")] Commute commute)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,KmDistance,Date,VehicleId")] Commute commute)
         {
             if (id != commute.Id)
             {
@@ -122,8 +139,7 @@ namespace Sustatron.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TransportationOptionId"] = new SelectList(_context.TransportationOptions, "Id", "Id", commute.TransportationOptionId);
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", commute.UserId);
+            ViewData["VehicleId"] = new SelectList(_context.Vehicles, "Id", "Id", commute.VehicleId);
             return View(commute);
         }
 
@@ -136,8 +152,7 @@ namespace Sustatron.Controllers
             }
 
             var commute = await _context.Commutes
-                .Include(c => c.TransportationOption)
-                .Include(c => c.User)
+                .Include(c => c.Vehicle)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (commute == null)
             {

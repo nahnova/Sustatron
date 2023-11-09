@@ -14,14 +14,9 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="UserId" class="control-label"></label>
-                <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
-                <span asp-validation-for="UserId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TransportationOptionId" class="control-label"></label>
-                <select asp-for="TransportationOptionId" class="form-control" asp-items="ViewBag.TransportationOptionId"></select>
-                <span asp-validation-for="TransportationOptionId" class="text-danger"></span>
+                <label asp-for="KmDistance" class="control-label"></label>
+                <input asp-for="KmDistance" class="form-control" />
+                <span asp-validation-for="KmDistance" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Date" class="control-label"></label>
@@ -29,29 +24,9 @@
                 <span asp-validation-for="Date" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="StartLocation" class="control-label"></label>
-                <input asp-for="StartLocation" class="form-control" />
-                <span asp-validation-for="StartLocation" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="EndLocation" class="control-label"></label>
-                <input asp-for="EndLocation" class="form-control" />
-                <span asp-validation-for="EndLocation" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Distance" class="control-label"></label>
-                <input asp-for="Distance" class="form-control" />
-                <span asp-validation-for="Distance" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Duration" class="control-label"></label>
-                <input asp-for="Duration" class="form-control" />
-                <span asp-validation-for="Duration" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CarbonEmissions" class="control-label"></label>
-                <input asp-for="CarbonEmissions" class="form-control" />
-                <span asp-validation-for="CarbonEmissions" class="text-danger"></span>
+                <label asp-for="VehicleId" class="control-label"></label>
+                <select asp-for="VehicleId" class="form-control" asp-items="ViewBag.VehicleId"></select>
+                <span asp-validation-for="VehicleId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

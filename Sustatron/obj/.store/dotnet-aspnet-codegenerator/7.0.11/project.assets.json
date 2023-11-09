@@ -410,16 +410,16 @@
     ]
   },
   "packageFolders": {
-    "/Users/noaheutz/Developer/Sustatron/Sustatron/obj/.store/.stage/21ktewzw.dl1": {}
+    "/Users/noaheutz/Developer/Sustatron/Sustatron/obj/.store/.stage/fzowuwbp.zsi": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/var/folders/25/pt7rzz0x1z54slf7zv9724jw0000gn/T/69a669a8-6e3a-4d0c-8f28-170402f79d14/restore.csproj",
+      "projectUniqueName": "/var/folders/25/pt7rzz0x1z54slf7zv9724jw0000gn/T/5f7801c0-aa68-460f-814b-a5cfa31a6496/restore.csproj",
       "projectName": "restore",
-      "projectPath": "/var/folders/25/pt7rzz0x1z54slf7zv9724jw0000gn/T/69a669a8-6e3a-4d0c-8f28-170402f79d14/restore.csproj",
-      "packagesPath": "/Users/noaheutz/Developer/Sustatron/Sustatron/obj/.store/.stage/21ktewzw.dl1",
-      "outputPath": "/Users/noaheutz/Developer/Sustatron/Sustatron/obj/.store/.stage/21ktewzw.dl1/",
+      "projectPath": "/var/folders/25/pt7rzz0x1z54slf7zv9724jw0000gn/T/5f7801c0-aa68-460f-814b-a5cfa31a6496/restore.csproj",
+      "packagesPath": "/Users/noaheutz/Developer/Sustatron/Sustatron/obj/.store/.stage/fzowuwbp.zsi",
+      "outputPath": "/Users/noaheutz/Developer/Sustatron/Sustatron/obj/.store/.stage/fzowuwbp.zsi/",
       "projectStyle": "DotnetToolReference",
       "configFilePaths": [
         "/Users/noaheutz/.nuget/NuGet/NuGet.Config"

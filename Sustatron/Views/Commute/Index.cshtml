@@ -4,37 +4,22 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Commute's</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Add a commute</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.User)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TransportationOption)
+                @Html.DisplayNameFor(model => model.KmDistance)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Date)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.StartLocation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EndLocation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Distance)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Duration)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CarbonEmissions)
+                Licence Plate
             </th>
             <th></th>
         </tr>
@@ -43,28 +28,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.User.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TransportationOption.Id)
+                @Html.DisplayFor(modelItem => item.KmDistance)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.StartLocation)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EndLocation)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Distance)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Duration)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CarbonEmissions)
+                @Html.DisplayFor(modelItem => item.Vehicle.LicencePlate)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

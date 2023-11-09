@@ -22,36 +22,6 @@ namespace Sustatron.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Sustatron.Models.Achievement", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("AchievementName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Criteria")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Achievements");
-                });
-
             modelBuilder.Entity("Sustatron.Models.Commute", b =>
                 {
                     b.Property<int>("Id")
@@ -60,145 +30,22 @@ namespace Sustatron.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<double>("CarbonEmissions")
-                        .HasColumnType("float");
-
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<double>("Distance")
-                        .HasColumnType("float");
-
-                    b.Property<double>("Duration")
-                        .HasColumnType("float");
-
-                    b.Property<string>("EndLocation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StartLocation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("TransportationOptionId")
+                    b.Property<int>("KmDistance")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
+                    b.Property<int>("VehicleId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TransportationOptionId");
-
-                    b.HasIndex("UserId");
+                    b.HasIndex("VehicleId");
 
                     b.ToTable("Commutes");
                 });
 
-            modelBuilder.Entity("Sustatron.Models.ParkingLocation", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("capacity")
-                        .HasColumnType("int");
-
-                    b.Property<string>("description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("latitude")
-                        .HasColumnType("int");
-
-                    b.Property<string>("locationName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("longitude")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ParkingLocations");
-                });
-
-            modelBuilder.Entity("Sustatron.Models.SustainabilityMetric", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("metricName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("unit")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("SustainabilityMetrics");
-                });
-
-            modelBuilder.Entity("Sustatron.Models.TrafficReport", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Source")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TrafficConditions")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TrafficReports");
-                });
-
-            modelBuilder.Entity("Sustatron.Models.TransportationOption", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("icon")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("optionName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TransportationOptions");
-                });
-
             modelBuilder.Entity("Sustatron.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -207,82 +54,100 @@ namespace Sustatron.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("CommutingPreferences")
+                    b.Property<int?>("CommuteId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ContactInformation")
+                    b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Points")
+                        .HasColumnType("int");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProfilePicture")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("StudentNumber")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CommuteId");
 
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Sustatron.Models.Achievement", b =>
+            modelBuilder.Entity("Sustatron.Models.Vehicle", b =>
                 {
-                    b.HasOne("Sustatron.Models.User", "User")
-                        .WithMany("Achievements")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Navigation("User");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CurrentEmission")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LicencePlate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MaxEmission")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("VehicleName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Vehicles");
                 });
 
             modelBuilder.Entity("Sustatron.Models.Commute", b =>
                 {
-                    b.HasOne("Sustatron.Models.TransportationOption", "TransportationOption")
+                    b.HasOne("Sustatron.Models.Vehicle", "Vehicle")
                         .WithMany("Commutes")
-                        .HasForeignKey("TransportationOptionId")
+                        .HasForeignKey("VehicleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Sustatron.Models.User", "User")
-                        .WithMany("Commutes")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("TransportationOption");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Sustatron.Models.TransportationOption", b =>
-                {
-                    b.Navigation("Commutes");
+                    b.Navigation("Vehicle");
                 });
 
             modelBuilder.Entity("Sustatron.Models.User", b =>
                 {
-                    b.Navigation("Achievements");
+                    b.HasOne("Sustatron.Models.Commute", "Commute")
+                        .WithMany()
+                        .HasForeignKey("CommuteId");
 
+                    b.Navigation("Commute");
+                });
+
+            modelBuilder.Entity("Sustatron.Models.Vehicle", b =>
+                {
+                    b.HasOne("Sustatron.Models.User", "User")
+                        .WithMany("Vehicles")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Sustatron.Models.User", b =>
+                {
+                    b.Navigation("Vehicles");
+                });
+
+            modelBuilder.Entity("Sustatron.Models.Vehicle", b =>
+                {
                     b.Navigation("Commutes");
                 });
 #pragma warning restore 612, 618
