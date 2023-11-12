@@ -205,7 +205,8 @@ Feel free to refer to the [Diagrams and Designs](#diagrams-and-designs) section 
 ![image 1](https://github.com/nahnova/Sustatron/assets/56248103/6932e21f-d434-4877-9933-98eb839132da)
 
 5. **Sequence Diagram**: Visualize the application flow and their related models.
-![image 3](https://github.com/nahnova/Sustatron/assets/56248103/44b4a338-d328-4361-b45c-176f502aae13)
+<img width="617" alt="Screenshot 2023-11-12 at 14 35 33" src="https://github.com/nahnova/Sustatron/assets/56248103/8c435ee3-f1c1-4b99-bfae-b66d710f56f6">
+
 
 ## Testplan 🧪🔧
 
