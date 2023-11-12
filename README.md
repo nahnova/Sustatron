@@ -97,14 +97,46 @@ We use GitHub for version control and collaborative development. Here are the st
 
 ## Folder Structure
 
-Here's an overview of the project's folder structure:
+The solution consists of two main projects, Sustatron and SustatronAPI, each with its own set of directories and files tailored for specific roles within the overall architecture.
 
-- `Controllers`: Contains MVC controller classes.
-- `Views`: Organized by controller actions for rendering HTML views.
-- `Models`: Entity classes and data models.
-- `Data`: Entity Framework DbContext and migrations.
-- `Services`: Business logic and services.
-- `wwwroot`: Static files like CSS, JavaScript, and images.
+### Sustatron Project
+
+- **Controllers**: Contains MVC controller classes for handling requests.
+  - `CommuteController.cs`
+  - `HomeController.cs`
+  - `UsersController.cs`
+  - `VehiclesController.cs`
+
+- **Data**: Includes the Entity Framework DbContext and any database migrations.
+  - `ApplicationDbContext.cs`
+
+- **Models**: Entity classes and data models.
+
+- **Views**: Organized by controller actions for rendering HTML views.
+
+- **wwwroot**: Static files like CSS, JavaScript, and images.
+
+- `appsettings.json`: Configuration settings for the application.
+
+- `Program.cs`: The main entry point for the application.
+
+### SustatronAPI Project (with Swagger)
+
+- **Controllers**: Contains API controller classes for handling API requests.
+  - `CommutesController.cs`
+  - `UsersController.cs`
+  - `VehiclesController.cs`
+
+- **Data**: Houses the Entity Framework DbContext and migrations for the API project.
+
+- **Models**: Entity classes and data models for API operations.
+
+- `appsettings.json`: Configuration settings specific to the API.
+
+- `Program.cs`: The entry point for the API application.
+
+*Note*: The "SustatronAPI" project uses Swagger for API documentation and testing.
+
 
 # Getting Started 🚀
 
