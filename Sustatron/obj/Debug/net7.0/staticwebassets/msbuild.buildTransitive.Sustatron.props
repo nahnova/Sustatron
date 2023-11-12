@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="../buildMultiTargeting/Sustatron.props" />
+  <Import Project="..\buildMultiTargeting\Sustatron.props" />
 </Project>
