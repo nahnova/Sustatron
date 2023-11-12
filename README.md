@@ -204,8 +204,7 @@ TODO:
 TODO:
 
 5. **Sequence Diagram**: Visualize the application flow and their related models.
-<img width="1607" alt="Sequence Diagram (Community)" src="https://github.com/nahnova/Sustatron/assets/56248472/c206bc2b-05a2-4eaf-84f2-9d9b9b4d8971">
-
+<img width="1607" alt="Sequence Diagram (Community)" src="https://github.com/nahnova/Sustatron/assets/56248472/8fb5e70b-dbfd-4394-a844-5336648351bb">
 
 
 ## Testplan 🧪🔧
