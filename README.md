@@ -236,13 +236,14 @@ Feel free to refer to the [Diagrams and Designs](#diagrams-and-designs) section 
 <img width="1365" alt="Screenshot 2023-11-12 at 14 17 21" src="https://github.com/nahnova/Sustatron/assets/56248103/cbc6e137-7936-4de6-a3b4-7d60d70ce63d">
 
 2. **Use Case Diagram**: Visualizes the use cases per actor.
+   
 ![Screenshot 2023-11-06 at 18 50 36](https://github.com/nahnova/Sustatron/assets/56248103/75f70124-f2aa-4d42-a0ec-12ef238d306a)
 
 
-3. **Entity Class Diagrams**: Visualize the relationships between entities in your code, including classes, properties, and methods.
+4. **Entity Class Diagrams**: Visualize the relationships between entities in your code, including classes, properties, and methods.
 ![image 1](https://github.com/nahnova/Sustatron/assets/56248103/6932e21f-d434-4877-9933-98eb839132da)
 
-4. **Sequence Diagram**: Visualize the application flow and their related models.
+5. **Sequence Diagram**: Visualize the application flow and their related models.
 ![image 3](https://github.com/nahnova/Sustatron/assets/56248103/44b4a338-d328-4361-b45c-176f502aae13)
 
 ## Testplan 🧪🔧
