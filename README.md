@@ -233,8 +233,7 @@ Feel free to refer to the [Diagrams and Designs](#diagrams-and-designs) section 
 ## Diagrams and Designs 📊🎨
 
 1. **Wireframes and Mockups**: Design the user interface of your application using wireframes or mockups to outline the layout and user interaction flow.
-![Screenshot 2023-11-03 at 16 18 45](https://github.com/nahnova/Sustatron/assets/56248103/a11d8c4d-ece8-431c-a10a-9a9c63659e34)
-
+<img width="1365" alt="Screenshot 2023-11-12 at 14 17 21" src="https://github.com/nahnova/Sustatron/assets/56248103/cbc6e137-7936-4de6-a3b4-7d60d70ce63d">
 
 2. **Use Case Diagram**: Visualizes the use cases per actor.
 ![Screenshot 2023-11-06 at 18 50 36](https://github.com/nahnova/Sustatron/assets/56248103/75f70124-f2aa-4d42-a0ec-12ef238d306a)
