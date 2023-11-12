@@ -202,6 +202,7 @@ Feel free to refer to the [Diagrams and Designs](#diagrams-and-designs) section 
 2. **Use Case Diagram**: Visualizes the use cases per actor.
 ![usecasediagram_png](https://github.com/nahnova/Sustatron/assets/56248472/2ae86d3d-51ad-4914-9a43-8459aa624c68)
 
+
 4. **Entity Class Diagrams**: Visualize the relationships between entities in your code, including classes, properties, and methods.
 <img width="1552" alt="Untitled" src="https://github.com/nahnova/Sustatron/assets/56248472/e6d5c031-62b1-4009-a64f-1894cfbda11e">
 
