@@ -6,7 +6,7 @@ Welcome to the Zuyd on Wheels project! This project aims to promote sustainable 
 [Assignment](https://mirri.link/1HdFU10)
 
 Explanation video:
-[Assignment](https://www.youtube.com/watch?v=LZ4P2GNIJTE)
+[PRESSME](https://www.youtube.com/watch?v=LZ4P2GNIJTE)
 
 # Table of Contents
 1. [Zuyd on Wheels - Sustainable Transportation Project](#zuyd-on-wheels---sustainable-transportation-project)
