@@ -245,12 +245,78 @@ Feel free to refer to the [Diagrams and Designs](#diagrams-and-designs) section 
 4. **Sequence Diagram**: Visualize the application flow and their related models.
 ![image 3](https://github.com/nahnova/Sustatron/assets/56248103/44b4a338-d328-4361-b45c-176f502aae13)
 
-## Testing and Contributions
+## Testplan 🧪🔧
 
-We welcome contributions to improve Zuyd on Wheels! Please follow these guidelines:
+#### Test Objectives
+1. To verify the accurate addition of user information.
+2. To ensure that vehicle registration functions as intended.
+3. To validate the successful addition of commute details.
+4. To confirm that vehicle emissions are calculated correctly based on commutes.
+5. To test the functionality of the vehicle chart with current emissions.
+6. To simulate the end of the month and reward points based on emissions reduction.
 
-- Write unit tests for new features and ensure all tests pass.
-- Adhere to the coding standards and conventions.
+#### Test Scenarios and Test Cases
+
+##### Test Scenario 1: User Registration (✅)
+- **Test Case 1.1:** Verify that a new user can be registered successfully.
+  - **Steps:**
+    1. Access the system.
+    2. Navigate to the user registration page.
+    3. Enter unique user details (e.g., username, email, password).
+    4. Click the "Register" button.
+  - **Expected Result:** The system should save the user data, and a success message should be displayed.
+
+##### Test Scenario 2: Vehicle Registration (✅)
+- **Test Case 2.1:** Verify that a new vehicle can be registered successfully.
+  - **Steps:**
+    1. Access the system.
+    2. Navigate to the vehicle registration page.
+    3. Enter unique vehicle details (e.g., vehicle name, license plate).
+    4. Click the "Register Vehicle" button.
+  - **Expected Result:** The system should save the vehicle data, and a success message should be displayed.
+
+##### Test Scenario 3: Commute Addition (✅)
+- **Test Case 3.1:** Add a new commute.
+  - **Steps:**
+    1. Access the system.
+    2. Navigate to the commute addition page.
+    3. Provide commute details (e.g., origin, destination, distance).
+    4. Click the "Add Commute" button.
+  - **Expected Result:** The system should add the commute details, and a success message should be displayed.
+
+##### Test Scenario 4: Emissions Calculation (✅)
+- **Test Case 4.1:** Verify that `MaxEmission` is calculated correctly based on commutes.
+  - **Steps:**
+    1. Access the system.
+    2. Register a vehicle.
+    3. Add commutes that contribute to `MaxEmission`.
+  - **Expected Result:** The `MaxEmission` for the vehicle should be calculated accurately based on the added commutes.
+
+- **Test Case 4.2:** Verify that `CurrentEmission` is calculated correctly based on commutes.
+  - **Steps:**
+    1. Access the system.
+    2. Register a vehicle.
+    3. Add commutes that contribute to `CurrentEmission`.
+  - **Expected Result:** The `CurrentEmission` for the vehicle should be calculated accurately based on the added commutes.
+
+##### Test Scenario 5: Vehicle Chart (✅)
+- **Test Case 5.1:** Check that the vehicle chart displays current emissions next to max emissions.
+  - **Steps:**
+    1. Access the system.
+    2. Navigate to a vehicle chart page.
+    3. Verify that the chart displays both current emissions and max emissions.
+  - **Expected Result:** The chart should show current emissions alongside max emissions.
+
+##### Test Scenario 6: End of the Month Simulation (✅)
+- **Test Case 6.1:** Simulate the end of the month and reward points for emissions reduction.
+  - **Steps:**
+    1. Access the system.
+    2. Navigate to the end-of-the-month simulation page.
+    3. Initiate the simulation.
+  - **Expected Result:** The system should calculate points based on emissions reduction and add them to the user's account.
+
+#### Conclusion 📝
+This extended test plan covers the additional features of the assignment, including the vehicle chart displaying current emissions, and the end-of-the-month simulation that rewards users based on emissions reduction. Executing these test cases will help ensure the functionality and reliability of these new features in the system.
 
 ## License
 
