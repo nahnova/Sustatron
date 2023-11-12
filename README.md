@@ -118,6 +118,7 @@ Follow these steps to set up the project locally and start contributing:
 3. **Create Configuration Files**:
    - Duplicate `appsettings.example.json` and rename it to `appsettings.json`.
    - Configure database connection strings and other settings in `appsettings.json`.
+   - Dont forget to do this is the Sustatron & SustatronApi both need a connection string
 
 4. **Build and Run**:
    - Open the project in Visual Studio or Visual Studio Code.
@@ -131,6 +132,8 @@ Follow these steps to set up the project locally and start contributing:
    ```
 
 7. **Explore the Application**:
+   - u can run SustatronApi( to view the swagger ui with all endpoints)
+   - u can run Sustatron( to view entire mvc applications)
    - Access the application in your web browser (usually at `http://localhost:port`).
 
 ## GitHub Usage and Contributions
